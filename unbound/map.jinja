@@ -12,6 +12,12 @@ that differ from whats in defaults.yaml
     'config': '/usr/local/etc/unbound/unbound.conf',
     'wheel_group': 'wheel',
   },
+  'RedHat': {
+    'service': 'unbound',
+    'package': 'unbound',
+    'config': '/etc/unbound/unbound.conf',
+    'wheel_group': 'wheel',
+  },
 }, merge=salt['pillar.get']('os_map:lookup')) %}
 
 {## Merge the os_map to default_settings ##}
